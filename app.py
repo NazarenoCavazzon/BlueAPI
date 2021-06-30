@@ -1,7 +1,11 @@
 import os
 from flask import Flask, jsonify
+from flask_caching import Cache
 from datetime import datetime
 
+VERSION = "1.0"
+CACHE_TIMEOUT_SECONDS = os.getenv('CACHE_TIMEOUT', 3600)
+GIT_REPO_URL = 'https://github.com/NazarenoCavazzon/EuroPriceAPI'
 DOLAR_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-dolar-hoy-argentina.html'
 EURO_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-euro-hoy-argentina.html'
 REAL_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-real-hoy-argentina.html'
@@ -35,42 +39,49 @@ def formatResponse(value):
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
+cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 @app.route("/api/ping")
 def ping():
     return 'pong'
 
 @app.route("/api/dolar/oficial")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getDolarOficial():
     dolarValues = getValues(DOLAR_URL)
     dolarOficial = formatResponse(dolarValues[0])
     return jsonify(dolarOficial)
 
 @app.route("/api/dolar/blue")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getDolarBlue():
     dolarValues = getValues(DOLAR_URL)
     dolarBlue = formatResponse(dolarValues[1])
     return jsonify(dolarBlue)
 
 @app.route("/api/euro/oficial")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getEuroOficial():
     euroValues = getValues(EURO_URL)
     euroOficial = formatResponse(euroValues[0])
     return jsonify(euroOficial)
 
 @app.route("/api/euro/blue")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getEuroBlue():
     euroValues = getValues(EURO_URL)
     euroBlue = formatResponse(euroValues[1])
     return jsonify(euroBlue)
 
 @app.route("/api/real/oficial")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getRealOficial():
     realValues = getValues(REAL_URL)
     realOficial = formatResponse(realValues[0])
     return jsonify(realOficial)
 
 @app.route("/api/real/blue")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getRealBlue():
     realValues = getValues(REAL_URL)
     realBlue = formatResponse(realValues[1])
