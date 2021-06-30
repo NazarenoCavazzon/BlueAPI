@@ -41,6 +41,16 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
+@app.route("/")
+def getRoot():
+    html = f"""<head>
+                   <title>Euro Price API v{VERSION}</title>
+               <head>
+               <body>
+                   Euro Price API <b>v{VERSION}</b> - <b><a href={GIT_REPO_URL} style="text-decoration: none;">GitHub</a></b>
+               </body>"""
+    return html
+
 @app.route("/api/ping")
 def ping():
     return 'pong'
