@@ -1,5 +1,5 @@
 import os
-from flask import Flask, jsonify
+from flask import Flask, send_from_directory, jsonify
 from flask_caching import Cache
 from datetime import datetime
 
@@ -41,13 +41,17 @@ app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
 cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
+@app.route("/favicon.ico")
+def favicon():
+    return send_from_directory(os.path.join(app.root_path, 'static'),'favicon.ico')
+
 @app.route("/")
 def getRoot():
     html = f"""<head>
-                   <title>Euro Price API v{VERSION}</title>
+                   <title>BluePy API v{VERSION}</title>
                <head>
                <body>
-                   Euro Price API <b>v{VERSION}</b> - <b><a href={GIT_REPO_URL} style="text-decoration: none;">GitHub</a></b>
+                   BluePy API <b>v{VERSION}</b> - <b><a href={GIT_REPO_URL} style="text-decoration: none;">GitHub</a></b>
                </body>"""
     return html
 
