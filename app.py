@@ -48,11 +48,11 @@ def favicon():
 @app.route("/")
 def getRoot():
     html = f"""<head>
-                   <title>BluePy API v{VERSION}</title>
-               <head>
-               <body>
-                   BluePy API <b>v{VERSION}</b> - <b><a href={GIT_REPO_URL} style="text-decoration: none;">GitHub</a></b>
-               </body>"""
+                    <title>BluePy API v{VERSION}</title>
+                <head>
+                <body style="font-family: Arial, Helvetica, sans-serif;font-weight: 700; font-size: 24px;">
+                    BluePy API <b>v{VERSION}</b> - <b><a href={GIT_REPO_URL} style="text-decoration: none;color:blue">GitHub</a></b>
+                </body>"""
     return html
 
 @app.route("/api/ping")
