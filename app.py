@@ -3,6 +3,7 @@ import codecs
 from datetime import datetime
 from flask_caching import Cache
 from flask import Flask, send_from_directory, jsonify
+from bs4 import BeautifulSoup
 
 VERSION = "1.0"
 CACHE_TIMEOUT_SECONDS = os.getenv('CACHE_TIMEOUT', 3600)
@@ -13,7 +14,6 @@ REAL_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-real-hoy-argentina.html'
 
 def getValues(url):
     import requests
-    from bs4 import BeautifulSoup
 
     html_source = requests.get(url).text
     soup = BeautifulSoup(html_source, 'lxml')
@@ -48,7 +48,9 @@ def favicon():
 
 @app.route("/")
 def getRoot():
-    html = codecs.open("html/index.html", "r", "utf-8")
+    with open('index.html') as html_file:
+        html = BeautifulSoup(html_file, 'lxml').prettify()
+    print(html)
     return html
 
 @app.route("/api/ping")
