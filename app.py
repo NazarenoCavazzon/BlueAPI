@@ -1,7 +1,8 @@
 import os
-from flask import Flask, send_from_directory, jsonify
-from flask_caching import Cache
+import codecs
 from datetime import datetime
+from flask_caching import Cache
+from flask import Flask, send_from_directory, jsonify
 
 VERSION = "1.0"
 CACHE_TIMEOUT_SECONDS = os.getenv('CACHE_TIMEOUT', 3600)
@@ -47,12 +48,7 @@ def favicon():
 
 @app.route("/")
 def getRoot():
-    html = f"""<head>
-                    <title>BluePy API v{VERSION}</title>
-                <head>
-                <body style="font-family: Arial, Helvetica, sans-serif;font-weight: 700; font-size: 24px;">
-                    BluePy API <b>v{VERSION}</b> - <b><a href={GIT_REPO_URL} style="text-decoration: none;color:blue">GitHub</a></b>
-                </body>"""
+    html = codecs.open("html/index.html", "r", "utf-8")
     return html
 
 @app.route("/api/ping")
