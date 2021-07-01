@@ -60,7 +60,6 @@ def getRoot():
             html += element
         else:
             html += element
-    print(html)
     return html
 
 @app.route("/api/ping")
