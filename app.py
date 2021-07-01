@@ -5,7 +5,7 @@ from datetime import datetime
 
 VERSION = "1.0"
 CACHE_TIMEOUT_SECONDS = os.getenv('CACHE_TIMEOUT', 3600)
-GIT_REPO_URL = 'https://github.com/NazarenoCavazzon/EuroPriceAPI'
+GIT_REPO_URL = 'https://github.com/NazarenoCavazzon/BlueAPI'
 DOLAR_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-dolar-hoy-argentina.html'
 EURO_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-euro-hoy-argentina.html'
 REAL_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-real-hoy-argentina.html'
