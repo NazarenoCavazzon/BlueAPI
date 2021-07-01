@@ -55,6 +55,9 @@ def getRoot():
         if element == "¡":
             element = VERSION
             html += element
+        elif element == "ñ":
+            element = GIT_REPO_URL
+            html += element
         else:
             html += element
     print(html)
