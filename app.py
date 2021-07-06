@@ -64,7 +64,7 @@ def getRoot():
 
 @app.route("/api/ping")
 def ping():
-    return 'pong'
+    return "pong"
 
 @app.route("/api/dolar/oficial")
 @cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
