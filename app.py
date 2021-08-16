@@ -12,6 +12,15 @@ DOLAR_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-dolar-hoy-argentina.htm
 EURO_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-euro-hoy-argentina.html'
 REAL_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-real-hoy-argentina.html'
 
+# Create a class called BusStop that will take line, name, address, latitude and longitude. 
+class BusStop:
+    def __init__(self, line, name, address, latitude, longitude):
+        self.line = line
+        self.name = name
+        self.address = address
+        self.latitude = latitude
+        self.longitude = longitude
+
 def getValues(url):
     import requests
 
@@ -107,6 +116,12 @@ def getRealBlue():
     realValues = getValues(REAL_URL)
     realBlue = formatResponse(realValues[1])
     return jsonify(realBlue)
+
+@app.route("/api/busstops")
+@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
+def getBusStops():
+    parada = BusStop("1", "Parada 1", "C.P. 14", "0.0", "0.0")
+    return jsonify(parada)
 
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
