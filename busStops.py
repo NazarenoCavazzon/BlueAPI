@@ -29,7 +29,7 @@ busStopsDict = [
         },
         {
             "lines": ["1","1B","2","3","4","5","6"],
-            "name": "Parada Plaza Solares",
+            "name": "Messssssi",
             "address": "Rafael Lozada 35",
             "lat": -31.65804,
             "lon": -64.43307
