@@ -1,5 +1,6 @@
 import os
 import codecs
+from busStops import busStopsDict
 from datetime import datetime
 from flask_caching import Cache
 from flask import Flask, send_from_directory, jsonify
@@ -120,8 +121,7 @@ def getRealBlue():
 @app.route("/api/busstops")
 @cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getBusStops():
-    parada = {"fecha":"2021-08-16 02:59:57","compra":"96.00","venta":"102.00"}
-    return jsonify(parada)
+    return jsonify(busStopsDict)
 
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
