@@ -120,7 +120,7 @@ def getRealBlue():
 @app.route("/api/busstops")
 @cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getBusStops():
-    parada = BusStop("1", "Parada 1", "C.P. 14", "0.0", "0.0")
+    parada = {"fecha":"2021-08-16 02:59:57","compra":"96.00","venta":"102.00"}
     return jsonify(parada)
 
 if __name__ == '__main__':
