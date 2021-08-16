@@ -119,7 +119,6 @@ def getRealBlue():
     return jsonify(realBlue)
 
 @app.route("/api/busstops")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getBusStops():
     return jsonify(busStopsDict)
 
