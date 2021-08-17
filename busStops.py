@@ -49,10 +49,24 @@ busStopsDict = [
             "lon": -64.44006
         },
         {
-            "lines": ["1B","3","6"],
+            "lines": ["1","3","6"],
             "name": "Parada El Obraje",
             "address": "Av. Lucas V. Cordoba 1330",
             "lat": -31.64427,
             "lon": -64.4339
+        },
+        {
+            "lines": ["3"],
+            "name": "Sanavirones 490",
+            "address": "Av. Sanavirones 490",
+            "lat": -31.63004,
+            "lon": -64.4371
+        },
+        {
+            "lines": ["6"],
+            "name": "Los Comechingones 30",
+            "address": "Bv. Los Comechingones 30",
+            "lat": -31.64067,
+            "lon": -64.43303
         },
 ]
