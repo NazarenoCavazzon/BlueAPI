@@ -123,7 +123,7 @@ def getRealBlue():
 def getBusStops():
     return jsonify(busStopsDict)
 
-@app.route("/api/line1/ida")
+@app.route("/api/1")
 def getLine1Ida():
     return jsonify(lineOne)
 
