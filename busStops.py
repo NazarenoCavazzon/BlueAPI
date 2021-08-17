@@ -48,4 +48,11 @@ busStopsDict = [
             "lat": -31.65527,
             "lon": -64.44006
         },
+        {
+            "lines": ["1B","3","6"],
+            "name": "Parada El Obraje",
+            "address": "Av. Lucas V. Cordoba 1330",
+            "lat": -31.64427,
+            "lon": -64.4339
+        },
 ]
