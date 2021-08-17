@@ -34,4 +34,18 @@ busStopsDict = [
             "lat": 37.423049,
             "lon": -122.082196
         },
+        {
+            "lines": ["5"],
+            "name": "Prudencio Bustos 50",
+            "address": "Prudencio Bustos 50",
+            "lat": -31.65740,
+            "lon": -64.42898
+        },
+        {
+            "lines": ["1","2","3","4","5"],
+            "name": "Parada El Alto",
+            "address": "Av. Sarmiento 450",
+            "lat": -31.65527,
+            "lon": -64.44006
+        },
 ]
