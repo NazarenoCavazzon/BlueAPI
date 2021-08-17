@@ -31,7 +31,7 @@ busStopsDict = [
             "lines": ["1","1B","2","3","4","5","6"],
             "name": "Parada Plaza Solares",
             "address": "Rafael Lozada 35",
-            "lat": 37.415667,
-            "lon": -122.069098
+            "lat": 37.423049,
+            "lon": -122.082196
         },
 ]
