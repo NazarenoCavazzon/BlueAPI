@@ -1,6 +1,6 @@
 import os
 import codecs
-import busRoutes
+from busRoutes import lineOne
 from busStops import busStopsDict
 from datetime import datetime
 from flask_caching import Cache
@@ -125,7 +125,7 @@ def getBusStops():
 
 @app.route("/api/line1/ida")
 def getLine1Ida():
-    return jsonify(busRoutes.lineOne)
+    return jsonify(lineOne)
 
 @app.route("/api/gmaps")
 def getGMaps():
