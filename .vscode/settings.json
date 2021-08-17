@@ -1,5 +1,6 @@
 {
     "python.analysis.extraPaths": [
-        "./busRoutes/Linea1"
+        "./busRoutes/Linea1",
+        "./BusRoutes/Line1"
     ]
 }
