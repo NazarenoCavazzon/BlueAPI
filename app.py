@@ -131,7 +131,7 @@ def getBusStops():
     return jsonify(busStopsDict)
 
 @app.route("/api/1")
-def getLine1a():
+def getLine1():
     return jsonify(lineOne)
 
 @app.route("/api/1B")
