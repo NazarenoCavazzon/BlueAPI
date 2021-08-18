@@ -2,6 +2,7 @@ import os
 import codecs
 from busRoutes import lineOne
 from busStops import busStopsDict
+from busStops import lines
 from datetime import datetime
 from flask_caching import Cache
 from flask import Flask, send_from_directory, jsonify
@@ -126,6 +127,10 @@ def getBusStops():
 @app.route("/api/1")
 def getLine1Ida():
     return jsonify(lineOne)
+
+@app.route("/api/lines")
+def getLines():
+    return jsonify(lines)
 
 @app.route("/api/gmaps")
 def getGMaps():
