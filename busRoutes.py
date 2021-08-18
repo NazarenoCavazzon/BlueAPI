@@ -8,3 +8,57 @@ lineOne = [
     ]
     }
 ]
+
+lineOneB = [
+    {
+        "ida": []
+    },
+    {
+        "vuelta": []
+    }
+]
+
+lineTwo = [
+    {
+        "ida": []
+    },
+    {
+        "vuelta": []
+    }
+]
+
+lineThree = [
+    {
+        "ida": []
+    },
+    {
+        "vuelta": []
+    }
+]
+
+lineFour = [
+    {
+        "ida": []
+    },
+    {
+        "vuelta": []
+    }
+]
+
+lineFive = [
+    {
+        "ida": []
+    },
+    {
+        "vuelta": []
+    }
+]
+
+lineSix = [
+    {
+        "ida": []
+    },
+    {
+        "vuelta": []
+    }
+]
