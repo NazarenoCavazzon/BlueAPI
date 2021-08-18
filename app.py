@@ -166,5 +166,9 @@ def getLines():
 def getGMaps():
     return jsonify("https://www.google.com/maps/d/u/0/viewer?mid=1d5o2MklEFr0DpG_i_mRwcUd9yjc&ll=-31.654431124663883%2C-64.43315245330842&z=15")
 
+@app.route("/api/donacion")
+def getDonationPage():
+    return jsonify("https://cafecito.app/paragracia")
+
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
