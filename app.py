@@ -1,6 +1,12 @@
 import os
 import codecs
 from busRoutes import lineOne
+from busRoutes import lineOneB
+from busRoutes import lineTwo
+from busRoutes import lineThree
+from busRoutes import lineFour
+from busRoutes import lineFive
+from busRoutes import lineSix
 from busStops import busStopsDict
 from busStops import linesDict
 from datetime import datetime
@@ -125,8 +131,32 @@ def getBusStops():
     return jsonify(busStopsDict)
 
 @app.route("/api/1")
-def getLine1Ida():
+def getLine1a():
     return jsonify(lineOne)
+
+@app.route("/api/1B")
+def getLine1B():
+    return jsonify(lineOneB)
+
+@app.route("/api/2")
+def getLine2():
+    return jsonify(lineTwo)
+
+@app.route("/api/3")
+def getLine3():
+    return jsonify(lineThree)
+
+@app.route("/api/4")
+def getLine4():
+    return jsonify(lineFour)
+
+@app.route("/api/5")
+def getLine5():
+    return jsonify(lineFive)
+
+@app.route("/api/6")
+def getLine6():
+    return jsonify(lineSix)
 
 @app.route("/api/linesDict")
 def getLines():
