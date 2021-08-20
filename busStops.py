@@ -1,7 +1,7 @@
 busStopsDict = [
         {
             "lines": ["1","1B","2","3","4","5","6"],
-            "name": "Parada Liniers-o",
+            "name": "Parada Liniers-Belgrano",
             "subtitle": "Hacia el Centro",
             "address": "Liniers 10, Alta Gracia",
             "lat": -31.6584,
