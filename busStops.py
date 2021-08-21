@@ -15,8 +15,8 @@ busStopsDict = [
 
 linesDict = [
     {
-        "lines": ["1", "malandrp", "2", "3", "4", "5", "6"],
+        "lines": ["1", "1B", "2", "3", "4", "5", "6"],
         #green, orange, yellow, red, blue, cyan, gray
-        "colors": ["orange", "red", "green", "green", "green", "yellow", "green"]
+        "colors": ["orange", "orange", "green", "green", "green", "yellow", "green"]
     }
 ]
