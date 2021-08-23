@@ -3,7 +3,8 @@ busStopsDict = [
         'lines': ['1', '1B', '2', '3', '4', '5', '6'], 
         'name': 'Rafael Lozada 35', 
         'subtitle': '', 
-        'address': 'Rafael Lozada 35', 
+        'address': 'Rafael Lozada 35',
+        'zone': 'Centro',
         'lat': -31.6580453, 
         'lon': -64.4330785
     }, 
@@ -40,5 +41,11 @@ linesDict = [
         "lines": ["1", "1B", "2", "3", "4", "5", "6"],
         #green, orange, yellow, red, blue, cyan, gray
         "colors": ["orange", "orange", "green", "green", "green", "yellow", "green"]
+    }
+]
+
+zonesDict = [
+    {
+        'zones': []
     }
 ]

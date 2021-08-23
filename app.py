@@ -1,5 +1,6 @@
 import os
 import codecs
+from busZonesTimes import busZonesTimes
 from busRoutes import lineOne
 from busRoutes import lineOneB
 from busRoutes import lineTwo
@@ -161,6 +162,10 @@ def getLine6():
 @app.route("/api/linesDict")
 def getLines():
     return jsonify(linesDict)
+
+@app.route("/api/centro")
+def getCentroTimes():
+    return jsonify(busZonesTimes["centro"])
 
 @app.route("/api/gmaps")
 def getGMaps():
