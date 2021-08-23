@@ -163,9 +163,9 @@ def getLine6():
 def getLines():
     return jsonify(linesDict)
 
-@app.route("/api/centro")
+@app.route("/api/busZonesTimes")
 def getCentroTimes():
-    return jsonify(busZonesTimes["centro"])
+    return jsonify(busZonesTimes)
 
 @app.route("/api/gmaps")
 def getGMaps():
