@@ -177,9 +177,12 @@ def getBusZonesOne():
 def getBusZonesOneB():
     return jsonify(busZonesTimesOneB)
 
-@app.route("/api/busZonesTimes/2")
-def getBusZonesTwo():
-    return jsonify(busZonesTimesTwo)
+@app.route("/api/busZonesTimes/2/centro")
+def getBusZonesTwoCentro():
+    return jsonify(busZonesTimesTwo[0])
+@app.route("/api/busZonesTimes/2/terminal")
+def getBusZonesTwoTerminal():
+    return jsonify(busZonesTimesTwo[1])
 
 @app.route("/api/busZonesTimes/3")
 def getBusZonesThree():
