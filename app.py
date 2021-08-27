@@ -229,7 +229,7 @@ def get4chedule():
     return jsonify(schedule4)
 
 @app.route("/api/5/schedule")
-def get5Bchedule():
+def get5chedule():
     return jsonify(schedule5)
 
 @app.route("/api/6/schedule")
