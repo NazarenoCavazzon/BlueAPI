@@ -1,17 +1,4 @@
 schedule1 = [
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    ["Terminal1","Juan","Messi"],
-    ["Terminal2","Juan","Messi"],
-    
+    ["Crucero","07:20","8:20","9:30","10:35",""],
+
 ]
