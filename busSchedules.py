@@ -1,8 +1,10 @@
 schedule1 = [
     {
-        'terminal1' : ["Messi", "", "Juan", "Messi"]
+        'name' : "terminal1",
+        'schedule' : ["Messi", "", "Juan", "Messi"]
     },
     {
-        "Hospital" : ["dsadsa", "", ""]
+        'name' : "hospital",
+        "schedule" : ["dsadsa", "", ""]
     }
 ]
