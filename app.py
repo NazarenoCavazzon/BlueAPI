@@ -1,6 +1,11 @@
 import os
 import codecs
-from busSchedules import schedule1
+from busSchedules import schedule1B
+from busSchedules import schedule2
+from busSchedules import schedule3
+from busSchedules import schedule4
+from busSchedules import schedule5
+from busSchedules import schedule6
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
 from busZonesTimes import busZonesTimesTwo
@@ -207,9 +212,29 @@ def getDonationPage():
     return jsonify("https://cafecito.app/paragracia")
 
 
+@app.route("/api/1B/schedule")
+def get1Bchedule():
+    return jsonify(schedule1B)
+
 @app.route("/api/2/schedule")
-def get2Schedule():
-    return jsonify(schedule1)
+def get2chedule():
+    return jsonify(schedule2)
+
+@app.route("/api/3/schedule")
+def get3chedule():
+    return jsonify(schedule3)
+
+@app.route("/api/4/schedule")
+def get4chedule():
+    return jsonify(schedule4)
+
+@app.route("/api/5/schedule")
+def get5Bchedule():
+    return jsonify(schedule5)
+
+@app.route("/api/6/schedule")
+def get6chedule():
+    return jsonify(schedule6)
 
 
 if __name__ == '__main__':
