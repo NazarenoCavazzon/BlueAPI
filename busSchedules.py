@@ -17,7 +17,17 @@ schedule2 = [
 ]
 
 schedule3 = [
-    []
+    ["B° Virrey"],
+    ["Centro"],
+    ["B° Cordoba"],
+    ["Portales del Sol"],
+    ["Villa Camiares"],
+    ["B° Sabattini"],
+    ["Centro"],
+    ["Hospital"],
+    ["Crucero"],
+    ["Cementerio"],
+    ["B° Virrey"]
 ]
 
 schedule4 = [
@@ -31,7 +41,13 @@ schedule4 = [
 ]
 
 schedule5 = [
-    []
+    ["Crucero"],
+    ["B° Don Bosco"],
+    ["Plaza Solares"],
+    ["Colonia J M Paz"],
+    ["Plaza Solares"],
+    ["B° Don Bosco"],
+    ["Crucero"]
 ]
 
 schedule6 = [
