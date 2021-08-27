@@ -208,7 +208,7 @@ def getDonationPage():
 
 
 @app.route("/api/1/schedule")
-def getDonationPage():
+def get1Schedule():
     return jsonify(schedule1)
 
 
