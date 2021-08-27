@@ -1,5 +1,6 @@
 import os
 import codecs
+from busSchedules import schedule1
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
 from busZonesTimes import busZonesTimesTwo
@@ -204,6 +205,12 @@ def getGMaps():
 @app.route("/api/donacion")
 def getDonationPage():
     return jsonify("https://cafecito.app/paragracia")
+
+
+@app.route("/api/1/schedule")
+def getDonationPage():
+    return jsonify(schedule1)
+
 
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
