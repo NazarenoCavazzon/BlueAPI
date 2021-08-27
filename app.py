@@ -207,8 +207,8 @@ def getDonationPage():
     return jsonify("https://cafecito.app/paragracia")
 
 
-@app.route("/api/1/schedule")
-def get1Schedule():
+@app.route("/api/2/schedule")
+def get2Schedule():
     return jsonify(schedule1)
 
 
