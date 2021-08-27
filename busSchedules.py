@@ -13,7 +13,20 @@ schedule1B = [
 ]
 
 schedule2 = [
-    []
+    ["Terminal",""],
+    ["Centro",""],
+    ["B° Sur",""],
+    ["B° Villa Oviedo","06:00"],
+    ["B° La Perla","06:08"],
+    ["B° Gral Bustos","06:13"],
+    ["Terminal","06:23"],
+    ["Centro","06:28"],
+    ["Hospital","06:41"],
+    ["Crucero","06:43"],
+    ["Cemente rio",""],
+    ["Hospital","06:45"],
+    ["Centro","07:03"],
+    ["Terminal","07:08"]
 ]
 
 schedule3 = [
