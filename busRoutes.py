@@ -92,4 +92,17 @@ lineFive = [
     }
 ]
 
-lineSix = []
+lineSix = [
+    {
+        "ida": [],
+
+
+        "vuelta": [],
+
+
+        "especial": [],
+
+
+        "paradas": []
+    }
+]
