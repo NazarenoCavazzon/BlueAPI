@@ -169,7 +169,8 @@ def getLine5():
 
 @app.route("/api/6")
 def getLine6():
-    return jsonify(lineSix)
+    return jsonify(lineOneB)
+
 
 @app.route("/api/linesDict")
 def getLines():
@@ -201,7 +202,7 @@ def getBusZonesFive():
 
 @app.route("/api/busZonesTimes/6")
 def getBusZonesSix():
-    return jsonify(busZonesTimesSix)
+    return jsonify(busZonesTimesOneB)
 
 @app.route("/api/gmaps")
 def getGMaps():
@@ -234,7 +235,8 @@ def get5chedule():
 
 @app.route("/api/6/schedule")
 def get6chedule():
-    return jsonify(schedule6)
+    return jsonify(schedule1B)
+
 
 
 if __name__ == '__main__':
