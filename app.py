@@ -252,61 +252,61 @@ def getBusZonesSix():
 # Horarios por ZONA Domingo ============================================================
 
 @app.route("/api/busZonesTimes/1/sunday")
-def getBusZonesOne():
+def getBusZonesOneSunday():
     return jsonify(busZonesTimesOneSunday)
 
 @app.route("/api/busZonesTimes/1B/sunday")
-def getBusZonesOneB():
+def getBusZonesOneBSunday():
     return jsonify(busZonesTimesOneBSunday)
 
 @app.route("/api/busZonesTimes/2/sunday")
-def getBusZonesTwo():
+def getBusZonesTwoSunday():
     return jsonify(busZonesTimesTwoSunday)
 
 @app.route("/api/busZonesTimes/3/sunday")
-def getBusZonesThree():
+def getBusZonesThreeSunday():
     return jsonify(busZonesTimesThreeSunday)
 
 @app.route("/api/busZonesTimes/4/sunday")
-def getBusZonesFour():
+def getBusZonesFourSunday():
     return jsonify(busZonesTimesFourSunday)
 
 @app.route("/api/busZonesTimes/5/sunday")
-def getBusZonesFive():
+def getBusZonesFiveSunday():
     return jsonify(busZonesTimesFiveSunday)
 
 @app.route("/api/busZonesTimes/6/sunday")
-def getBusZonesSix():
+def getBusZonesSixSunday():
     return jsonify(busZonesTimesSixSunday)
 
 # Horarios por ZONA Sabado ============================================================
 
 @app.route("/api/busZonesTimes/1/saturday")
-def getBusZonesOne():
+def getBusZonesOneSaturday():
     return jsonify(busZonesTimesOneSaturday)
 
 @app.route("/api/busZonesTimes/1B/saturday")
-def getBusZonesOneB():
+def getBusZonesOneBSaturday():
     return jsonify(busZonesTimesOneBSaturday)
 
 @app.route("/api/busZonesTimes/2/saturday")
-def getBusZonesTwo():
+def getBusZonesTwoSaturday():
     return jsonify(busZonesTimesTwoSaturday)
 
 @app.route("/api/busZonesTimes/3/saturday")
-def getBusZonesThree():
+def getBusZonesThreeSaturday():
     return jsonify(busZonesTimesThreeSaturday)
 
 @app.route("/api/busZonesTimes/4/saturday")
-def getBusZonesFour():
+def getBusZonesFourSaturday():
     return jsonify(busZonesTimesFourSaturday)
 
 @app.route("/api/busZonesTimes/5/saturday")
-def getBusZonesFive():
+def getBusZonesFiveSaturday():
     return jsonify(busZonesTimesFiveSaturday)
 
 @app.route("/api/busZonesTimes/6/saturday")
-def getBusZonesSix():
+def getBusZonesSixSaturday():
     return jsonify(busZonesTimesSixSaturday)
 
 
