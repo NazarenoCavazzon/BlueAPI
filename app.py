@@ -1,25 +1,8 @@
 import os
 import codecs
-from busSchedules import schedule1B
-from busSchedules import schedule2
-from busSchedules import schedule3
-from busSchedules import schedule4
-from busSchedules import schedule5
-from busSchedules import schedule6
-from busZonesTimes import busZonesTimesOne
-from busZonesTimes import busZonesTimesOneB
-from busZonesTimes import busZonesTimesTwo
-from busZonesTimes import busZonesTimesThree
-from busZonesTimes import busZonesTimesFour
-from busZonesTimes import busZonesTimesFive
-from busZonesTimes import busZonesTimesSix
-from busRoutes import lineOne
-from busRoutes import lineOneB
-from busRoutes import lineTwo
-from busRoutes import lineThree
-from busRoutes import lineFour
-from busRoutes import lineFive
-from busRoutes import lineSix
+from busSchedules import *
+from busZonesTimes import *
+from busRoutes import *
 from busStops import busStopsDict
 from busStops import linesDict
 from datetime import datetime
@@ -175,6 +158,8 @@ def getLine6():
 def getLines():
     return jsonify(linesDict)
 
+# Horarios por ZONA ============================================================
+
 @app.route("/api/busZonesTimes/1")
 def getBusZonesOne():
     return jsonify(busZonesTimesOne)
@@ -203,6 +188,99 @@ def getBusZonesFive():
 def getBusZonesSix():
     return jsonify(busZonesTimesSix)
 
+# Horarios por ZONA ============================================================
+
+@app.route("/api/busZonesTimes/1")
+def getBusZonesOne():
+    return jsonify(busZonesTimesOne)
+
+@app.route("/api/busZonesTimes/1B")
+def getBusZonesOneB():
+    return jsonify(busZonesTimesOneB)
+
+@app.route("/api/busZonesTimes/2")
+def getBusZonesTwo():
+    return jsonify(busZonesTimesTwo)
+
+@app.route("/api/busZonesTimes/3")
+def getBusZonesThree():
+    return jsonify(busZonesTimesThree)
+
+@app.route("/api/busZonesTimes/4")
+def getBusZonesFour():
+    return jsonify(busZonesTimesFour)
+
+@app.route("/api/busZonesTimes/5")
+def getBusZonesFive():
+    return jsonify(busZonesTimesFive)
+
+@app.route("/api/busZonesTimes/6")
+def getBusZonesSix():
+    return jsonify(busZonesTimesSix)
+
+# Horarios por ZONA Domingo ============================================================
+
+@app.route("/api/busZonesTimes/1/sunday")
+def getBusZonesOne():
+    return jsonify(busZonesTimesOneSunday)
+
+@app.route("/api/busZonesTimes/1B/sunday")
+def getBusZonesOneB():
+    return jsonify(busZonesTimesOneBSunday)
+
+@app.route("/api/busZonesTimes/2/sunday")
+def getBusZonesTwo():
+    return jsonify(busZonesTimesTwoSunday)
+
+@app.route("/api/busZonesTimes/3/sunday")
+def getBusZonesThree():
+    return jsonify(busZonesTimesThreeSunday)
+
+@app.route("/api/busZonesTimes/4/sunday")
+def getBusZonesFour():
+    return jsonify(busZonesTimesFourSunday)
+
+@app.route("/api/busZonesTimes/5/sunday")
+def getBusZonesFive():
+    return jsonify(busZonesTimesFiveSunday)
+
+@app.route("/api/busZonesTimes/6/sunday")
+def getBusZonesSix():
+    return jsonify(busZonesTimesSixSunday)
+
+# Horarios por ZONA Sabado ============================================================
+
+@app.route("/api/busZonesTimes/1/saturday")
+def getBusZonesOne():
+    return jsonify(busZonesTimesOneSaturday)
+
+@app.route("/api/busZonesTimes/1B/saturday")
+def getBusZonesOneB():
+    return jsonify(busZonesTimesOneBSaturday)
+
+@app.route("/api/busZonesTimes/2/saturday")
+def getBusZonesTwo():
+    return jsonify(busZonesTimesTwoSaturday)
+
+@app.route("/api/busZonesTimes/3/saturday")
+def getBusZonesThree():
+    return jsonify(busZonesTimesThreeSaturday)
+
+@app.route("/api/busZonesTimes/4/saturday")
+def getBusZonesFour():
+    return jsonify(busZonesTimesFourSaturday)
+
+@app.route("/api/busZonesTimes/5/saturday")
+def getBusZonesFive():
+    return jsonify(busZonesTimesFiveSaturday)
+
+@app.route("/api/busZonesTimes/6/saturday")
+def getBusZonesSix():
+    return jsonify(busZonesTimesSixSaturday)
+
+
+# Botones ============================================================
+
 @app.route("/api/gmaps")
 def getGMaps():
     return jsonify("https://www.google.com/maps/d/u/0/viewer?mid=1d5o2MklEFr0DpG_i_mRwcUd9yjc&ll=-31.654431124663883%2C-64.43315245330842&z=15")
@@ -211,6 +289,8 @@ def getGMaps():
 def getDonationPage():
     return jsonify("https://cafecito.app/paragracia")
 
+
+# Horarios de las lineas de las semanas ============================================================
 
 @app.route("/api/1B/schedule")
 def get1Bchedule():
@@ -236,6 +316,34 @@ def get5chedule():
 def get6chedule():
     return jsonify(schedule6)
 
+
+# Horarios de las lineas de los fines de semana ============================================================
+
+"""
+@app.route("/api/1B/schedule/saturday")
+def get1Bchedule():
+    return jsonify(schedule1B)
+
+@app.route("/api/2/schedule/saturday")
+def get2chedule():
+    return jsonify(schedule2)
+
+@app.route("/api/3/schedule/saturday")
+def get3chedule():
+    return jsonify(schedule3)
+
+@app.route("/api/4/schedule/saturday")
+def get4chedule():
+    return jsonify(schedule4)
+
+@app.route("/api/5/schedule/saturday")
+def get5chedule():
+    return jsonify(schedule5)
+
+@app.route("/api/6/schedule/saturday")
+def get6chedule():
+    return jsonify(schedule6)
+"""
 
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
