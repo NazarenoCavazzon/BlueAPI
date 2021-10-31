@@ -219,36 +219,6 @@ def getBusZonesFive():
 def getBusZonesSix():
     return jsonify(busZonesTimesSix)
 
-# Horarios por ZONA ============================================================
-
-@app.route("/api/busZonesTimes/1")
-def getBusZonesOne():
-    return jsonify(busZonesTimesOne)
-
-@app.route("/api/busZonesTimes/1B")
-def getBusZonesOneB():
-    return jsonify(busZonesTimesOneB)
-
-@app.route("/api/busZonesTimes/2")
-def getBusZonesTwo():
-    return jsonify(busZonesTimesTwo)
-
-@app.route("/api/busZonesTimes/3")
-def getBusZonesThree():
-    return jsonify(busZonesTimesThree)
-
-@app.route("/api/busZonesTimes/4")
-def getBusZonesFour():
-    return jsonify(busZonesTimesFour)
-
-@app.route("/api/busZonesTimes/5")
-def getBusZonesFive():
-    return jsonify(busZonesTimesFive)
-
-@app.route("/api/busZonesTimes/6")
-def getBusZonesSix():
-    return jsonify(busZonesTimesSix)
-
 # Horarios por ZONA Domingo ============================================================
 
 @app.route("/api/busZonesTimes/1/sunday")
