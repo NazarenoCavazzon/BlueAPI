@@ -34,6 +34,7 @@ from busRoutes import lineThree
 from busRoutes import lineFour
 from busRoutes import lineFive
 from busRoutes import lineSix
+from busRoutes import line242
 from busStops import busStopsDict
 from busStops import linesDict
 from datetime import datetime

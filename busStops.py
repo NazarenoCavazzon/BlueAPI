@@ -2,10 +2,10 @@ busStopsDict = [{'lines': ['1', '1B', '2', '3', '4', '5', '6'], 'name': 'Rafael 
 
 linesDict = [
     {
-        "lines": ["1B", "2", "3", "4", "5", "6", "7"],
+        "lines": ["1B", "2", "3", "4", "5", "6", "7", "242"],
         #green, orange, yellow, red, blue, cyan, gray
-        "colors": ["orange", "green", "green", "green", "yellow", "green", "green"],
+        "colors": ["orange", "green", "green", "green", "yellow", "green", "green", "green"],
         #suspended, operative
-        "status": ["operative","operative","operative","operative","operative","operative", "suspended"]
+        "status": ["operative","operative","operative","operative","operative","operative", "suspended", "suspended"]
     }
 ]
