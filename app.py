@@ -6,7 +6,7 @@ from busSchedules import schedule3
 from busSchedules import schedule4
 from busSchedules import schedule5
 from busSchedules import schedule6
-from busSchedules import schedule242
+from busSchedules import horario242
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
 from busZonesTimes import busZonesTimesTwo
@@ -77,6 +77,8 @@ def getValues(url):
         list.append(value)
 
     return list
+
+# ========================== API Dolar Blue ==========================
 
 def formatResponse(value):
     return {
@@ -155,9 +157,13 @@ def getRealBlue():
     realBlue = formatResponse(realValues[1])
     return jsonify(realBlue)
 
+# ============================== Paradas de Colectivo ==============================
+
 @app.route("/api/busstops")
 def getBusStops():
     return jsonify(busStopsDict)
+
+# ================== Lineas de colectivos =======================
 
 @app.route("/api/1")
 def getLine1():
@@ -187,11 +193,17 @@ def getLine5():
 def getLine6():
     return jsonify(lineSix)
 
+@app.route("/api/242")
+def getLine6():
+    return jsonify(line242)
+
+# ================ Obtiene las lineas de busStops.py ===============
+
 @app.route("/api/linesDict")
 def getLines():
     return jsonify(linesDict)
 
-# Horarios por ZONA ============================================================
+# ============================== Horarios por ZONA ==============================
 
 @app.route("/api/busZonesTimes/1")
 def getBusZonesOne():
@@ -221,7 +233,7 @@ def getBusZonesFive():
 def getBusZonesSix():
     return jsonify(busZonesTimesSix)
 
-# Horarios por ZONA Domingo ============================================================
+# ============================== Horarios por ZONA (Domingo) ==============================
 
 @app.route("/api/busZonesTimes/1/sunday")
 def getBusZonesOneSunday():
@@ -251,7 +263,7 @@ def getBusZonesFiveSunday():
 def getBusZonesSixSunday():
     return jsonify(busZonesTimesSixSunday)
 
-# Horarios por ZONA Sabado ============================================================
+# ============================== Horarios por ZONA (Sabado) ==============================
 
 @app.route("/api/busZonesTimes/1/saturday")
 def getBusZonesOneSaturday():
@@ -282,7 +294,7 @@ def getBusZonesSixSaturday():
     return jsonify(busZonesTimesSixSaturday)
 
 
-# Botones ============================================================
+# ============================== Botones ==============================
 
 @app.route("/api/gmaps")
 def getGMaps():
@@ -290,10 +302,10 @@ def getGMaps():
 
 @app.route("/api/donacion")
 def getDonationPage():
-    return jsonify("https://cafecito.app/paragracia")
+    return jsonify("")
 
 
-# Horarios de las lineas de las semanas ============================================================
+# ============================== Horarios de las lineas de las semanas ==============================
 
 @app.route("/api/1B/schedule")
 def get1Bchedule():
@@ -319,34 +331,37 @@ def get5chedule():
 def get6chedule():
     return jsonify(schedule6)
 
-
-# Horarios de las lineas de los fines de semana ============================================================
-
-"""
-@app.route("/api/1B/schedule/saturday")
-def get1Bchedule():
-    return jsonify(schedule1B)
-
-@app.route("/api/2/schedule/saturday")
-def get2chedule():
-    return jsonify(schedule2)
-
-@app.route("/api/3/schedule/saturday")
-def get3chedule():
-    return jsonify(schedule3)
-
-@app.route("/api/4/schedule/saturday")
-def get4chedule():
-    return jsonify(schedule4)
-
-@app.route("/api/5/schedule/saturday")
-def get5chedule():
-    return jsonify(schedule5)
-
-@app.route("/api/6/schedule/saturday")
+@app.route("/api/242/schedule")
 def get6chedule():
-    return jsonify(schedule6)
-"""
+    return jsonify(horario242)
+
+
+# ============================== Horarios de las lineas [Lista] (Domingo) ==============================
+
+# @app.route("/api/1B/schedule/saturday")
+# def get1Bchedule():
+#     return jsonify(schedule1B)
+
+# @app.route("/api/2/schedule/saturday")
+# def get2chedule():
+#     return jsonify(schedule2)
+
+# @app.route("/api/3/schedule/saturday")
+# def get3chedule():
+#     return jsonify(schedule3)
+
+# @app.route("/api/4/schedule/saturday")
+# def get4chedule():
+#     return jsonify(schedule4)
+
+# @app.route("/api/5/schedule/saturday")
+# def get5chedule():
+#     return jsonify(schedule5)
+
+# @app.route("/api/6/schedule/saturday")
+# def get6chedule():
+#     return jsonify(schedule6)
+
 
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
