@@ -6,6 +6,7 @@ from busSchedules import schedule3
 from busSchedules import schedule4
 from busSchedules import schedule5
 from busSchedules import schedule6
+from busSchedules import schedule242
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
 from busZonesTimes import busZonesTimesTwo
