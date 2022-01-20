@@ -194,7 +194,7 @@ def getLine6():
     return jsonify(lineSix)
 
 @app.route("/api/242")
-def getLine6():
+def getLine242():
     return jsonify(line242)
 
 # ================ Obtiene las lineas de busStops.py ===============
