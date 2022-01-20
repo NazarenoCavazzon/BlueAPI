@@ -332,7 +332,7 @@ def get6chedule():
     return jsonify(schedule6)
 
 @app.route("/api/242/schedule")
-def get6chedule():
+def get242chedule():
     return jsonify(horario242)
 
 
