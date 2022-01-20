@@ -245,7 +245,7 @@ def getBusZonesOneBSunday():
 
 @app.route("/api/busZonesTimes/2/sunday")
 def getBusZonesTwoSunday():
-    return jsonify(busZonesTimesTwoSunday)
+    return jsonify(busZonesTimesTwo)
 
 @app.route("/api/busZonesTimes/3/sunday")
 def getBusZonesThreeSunday():
