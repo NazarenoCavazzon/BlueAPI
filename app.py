@@ -14,6 +14,7 @@ from busZonesTimes import busZonesTimesThree
 from busZonesTimes import busZonesTimesFour
 from busZonesTimes import busZonesTimesFive
 from busZonesTimes import busZonesTimesSix
+from busZonesTimes import busHorarios242
 from busZonesTimes import busZonesTimesOneSaturday
 from busZonesTimes import busZonesTimesOneBSaturday
 from busZonesTimes import busZonesTimesTwoSaturday
@@ -232,6 +233,10 @@ def getBusZonesFive():
 @app.route("/api/busZonesTimes/6")
 def getBusZonesSix():
     return jsonify(busZonesTimesSix)
+
+@app.route("/api/busZonesTimes/242")
+def getBusZones242():
+    return jsonify(busHorarios242)
 
 # ============================== Horarios por ZONA (Domingo) ==============================
 
