@@ -187,6 +187,15 @@ busZonesTimesSixSaturday = [
     }
 ]
 
+busHorarios242sabado = [
+    {
+        "terminalCP": [[8, 30], [11, 30], [19, 30]],
+        "villaCamiaresIda": [[10, 16], [13, 18], [20, 56]],
+        "cruceR20_1": [[10, 51], [13, 50], [21, 17]],
+        "centro": [[10, 5], [13, 5], [20, 40]]
+    }
+]
+
 # Horarios por ZONA Domingo ============================================================
 
 busZonesTimesOneSunday = [
