@@ -322,7 +322,7 @@ def getGMaps():
 
 @app.route("/api/donacion")
 def getDonationPage():
-    return jsonify("")
+    return jsonify("https://cafecito.app/paragracia")
 
 
 # ============================== Horarios de las lineas de las semanas ==============================
