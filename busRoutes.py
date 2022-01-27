@@ -426,3 +426,15 @@ linea125 = [
         "paradas":[(-31.42446, -64.17325)]
     }
 ]
+
+lineaS2 = [
+    {
+        "ida": [],
+
+        "vuelta": [],
+
+        "especial": [],
+
+        "paradas": []
+    }
+]
