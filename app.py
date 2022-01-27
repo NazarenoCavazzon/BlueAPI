@@ -17,7 +17,7 @@ from busZonesTimes import busZonesTimesFive
 from busZonesTimes import busZonesTimesSix
 from busZonesTimes import busHorarios242
 from busZonesTimes import horario125
-from busZonesTimes import S2hablies
+# from busZonesTimes import S2hablies
 from busZonesTimes import busZonesTimesOneSaturday
 from busZonesTimes import busZonesTimesOneBSaturday
 from busZonesTimes import busZonesTimesTwoSaturday
@@ -26,7 +26,7 @@ from busZonesTimes import busZonesTimesFourSaturday
 from busZonesTimes import busZonesTimesFiveSaturday
 from busZonesTimes import busZonesTimesSixSaturday
 from busZonesTimes import busHorarios242sabado
-from busZonesTimes import S2sabados
+# from busZonesTimes import S2sabados
 from busZonesTimes import busZonesTimesOneSunday
 from busZonesTimes import busZonesTimesOneBSunday
 from busZonesTimes import busZonesTimesTwoSaturday
@@ -34,7 +34,7 @@ from busZonesTimes import busZonesTimesThreeSunday
 from busZonesTimes import busZonesTimesFourSunday
 from busZonesTimes import busZonesTimesFiveSunday
 from busZonesTimes import busZonesTimesSixSunday
-from busZonesTimes import S2domingos
+# from busZonesTimes import S2domingos
 from busRoutes import lineOne
 from busRoutes import lineOneB
 from busRoutes import lineTwo
