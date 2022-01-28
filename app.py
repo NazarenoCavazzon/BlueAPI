@@ -327,11 +327,11 @@ def getBusZones242Saturday():
 
 @app.route("/api/gmaps")
 def getGMaps():
-    return "https://www.google.com/maps/d/u/0/viewer?mid=1d5o2MklEFr0DpG_i_mRwcUd9yjc&ll=-31.654431124663883%2C-64.43315245330842&z=15"
+    return jsonify("https://www.google.com/maps/d/u/0/viewer?mid=1d5o2MklEFr0DpG_i_mRwcUd9yjc&ll=-31.654431124663883%2C-64.43315245330842&z=15")
 
 @app.route("/api/donacion")
 def getDonationPage():
-    return "https://cafecito.app/paragracia"
+    return jsonify("https://cafecito.app/paragracia")
 
 
 # ============================== Horarios de las lineas de las semanas ==============================
