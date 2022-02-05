@@ -326,13 +326,13 @@ def getBusZones242Saturday():
 
 # ============================== Botones ==============================
 
-# @app.route("/api/gmaps")
-# def getGMaps():
-#     return jsonify("https://www.google.com/maps/d/u/0/viewer?mid=1d5o2MklEFr0DpG_i_mRwcUd9yjc&ll=-31.654431124663883%2C-64.43315245330842&z=15")
+@app.route("/api/gmaps")
+def getGMaps():
+    return jsonify("https://www.google.com/maps/d/u/0/viewer?mid=1d5o2MklEFr0DpG_i_mRwcUd9yjc&ll=-31.654431124663883%2C-64.43315245330842&z=15")
 
-# @app.route("/api/donacion")
-# def getDonationPage():
-#     return jsonify("https://cafecito.app/paragracia")
+@app.route("/api/donacion")
+def getDonationPage():
+    return jsonify("https://cafecito.app/paragracia")
 
 
 # ============================== Horarios de las lineas de las semanas ==============================
