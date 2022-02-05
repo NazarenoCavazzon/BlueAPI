@@ -8,6 +8,7 @@ from busSchedules import schedule5
 from busSchedules import schedule6
 from busSchedules import horario242
 from busSchedules import horarioS2
+from busSchedules import horariosierras
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
 from busZonesTimes import busZonesTimesTwo
@@ -359,6 +360,10 @@ def get5chedule():
 @app.route("/api/6/schedule")
 def get6chedule():
     return jsonify(schedule6)
+
+@app.route("/api/125/schedule")
+def get125schedule():
+    return jsonify(horariosierras)
 
 @app.route("/api/242/schedule")
 def get242chedule():
