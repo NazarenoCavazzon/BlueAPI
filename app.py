@@ -1,5 +1,7 @@
+import imp
 import os
 import codecs
+# Importa horarios para seccion INFO. -----------
 from busSchedules import schedule1B
 from busSchedules import schedule2
 from busSchedules import schedule3
@@ -9,6 +11,7 @@ from busSchedules import schedule6
 from busSchedules import horario242
 from busSchedules import horarioS2
 from busSchedules import horariosierras
+# Importa horarios habiles de las lineas. ----------- (LINEA 234)
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
 from busZonesTimes import busZonesTimesTwo
@@ -19,6 +22,7 @@ from busZonesTimes import busZonesTimesSix
 from busZonesTimes import busHorarios242
 from busZonesTimes import horario125
 # from busZonesTimes import S2hablies
+# Importa horarios de Sabado de las lineas. ----------- (LINEA 302)
 from busZonesTimes import busZonesTimesOneSaturday
 from busZonesTimes import busZonesTimesOneBSaturday
 from busZonesTimes import busZonesTimesTwoSaturday
@@ -27,7 +31,9 @@ from busZonesTimes import busZonesTimesFourSaturday
 from busZonesTimes import busZonesTimesFiveSaturday
 from busZonesTimes import busZonesTimesSixSaturday
 from busZonesTimes import busHorarios242sabado
+from busZonesTimes import horario125sabado
 # from busZonesTimes import S2sabados
+# Importa horario de Domingo de las lineas. ----------- (LINEA 272)
 from busZonesTimes import busZonesTimesOneSunday
 from busZonesTimes import busZonesTimesOneBSunday
 from busZonesTimes import busZonesTimesTwoSaturday
@@ -36,6 +42,7 @@ from busZonesTimes import busZonesTimesFourSunday
 from busZonesTimes import busZonesTimesFiveSunday
 from busZonesTimes import busZonesTimesSixSunday
 # from busZonesTimes import S2domingos
+# Importa las rutas para graficarlas. -----------
 from busRoutes import lineOne
 from busRoutes import lineOneB
 from busRoutes import lineTwo
@@ -46,13 +53,16 @@ from busRoutes import lineSix
 from busRoutes import line242
 from busRoutes import linea125
 from busRoutes import lineaS2
+# Importa el numero, color y estado de las lineas. -----------
 from busStops import busStopsDict
 from busStops import linesDict
+# No se que hace. -----------
 from datetime import datetime
 from flask_caching import Cache
 from flask import Flask, send_from_directory, jsonify
 from bs4 import BeautifulSoup
 
+# URLs. -----------
 VERSION = "1.0"
 CACHE_TIMEOUT_SECONDS = os.getenv('CACHE_TIMEOUT', 3600)
 GIT_REPO_URL = 'https://github.com/NazarenoCavazzon/BlueAPI'
@@ -60,7 +70,7 @@ DOLAR_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-dolar-hoy-argentina.htm
 EURO_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-euro-hoy-argentina.html'
 REAL_URL = 'https://www.paralelohoy.com.ar/p/cotizacion-real-hoy-argentina.html'
 
-# Create a class called BusStop that will take line, name, address, latitude and longitude. 
+# Crea una clase que obtiene linea, nombre, direccion, latitud y longitud. -----------
 class BusStop:
     def __init__(self, line, name, address, latitude, longitude):
         self.line = line
@@ -289,6 +299,10 @@ def getBusZonesFiveSunday():
 def getBusZonesSixSunday():
     return jsonify(busZonesTimesSixSunday)
 
+# @app.route("/api/busZonesTimes/125/sunday")
+# def getBusZones125Sunday():
+#     return jsonify(horario125domingo)
+
 # ============================== Horarios por ZONA (Sabado) ==============================
 
 @app.route("/api/busZonesTimes/1/saturday")
@@ -323,6 +337,10 @@ def getBusZonesSixSaturday():
 def getBusZones242Saturday():
     return jsonify(busHorarios242sabado)
 
+@app.route("/api/busZonesTimes/125/saturday")
+def getBusZones125Saturday():
+    return jsonify(horario125sabado)
+
 
 # ============================== Botones ==============================
 
@@ -335,7 +353,7 @@ def getDonationPage():
     return jsonify("https://cafecito.app/paragracia")
 
 
-# ============================== Horarios de las lineas de las semanas ==============================
+# ============================== Horarios de las lineas [Lista] Hábiles ==============================
 
 @app.route("/api/1B/schedule")
 def get1Bchedule():
