@@ -6,6 +6,6 @@ linesDict = [
         #green, orange, yellow, red, blue, cyan, gray
         "colors": ["orange", "green", "green", "green", "yellow", "green", "blue", "green", "green"],
         #suspended, operative
-        "status": ["operative","operative","operative","operative","operative","operative", "operative", "operative", "operative"]
+        "status": ["operative","operative","operative","operative","operative","operative", "operative", "suspended", "operative"]
     }
 ]
