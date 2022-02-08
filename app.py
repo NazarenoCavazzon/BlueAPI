@@ -11,6 +11,7 @@ from busSchedules import schedule6
 from busSchedules import horario242
 from busSchedules import horarioS2
 from busSchedules import horariosierras
+from busSchedules import horarioSarmientoDif
 # Importa horarios habiles de las lineas. ----------- (LINEA 234)
 from busZonesTimes import busZonesTimesOne
 from busZonesTimes import busZonesTimesOneB
@@ -21,6 +22,7 @@ from busZonesTimes import busZonesTimesFive
 from busZonesTimes import busZonesTimesSix
 from busZonesTimes import busHorarios242
 from busZonesTimes import horario125
+from busZonesTimes import horario125R
 # from busZonesTimes import S2hablies
 # Importa horarios de Sabado de las lineas. ----------- (LINEA 302)
 from busZonesTimes import busZonesTimesOneSaturday
@@ -32,6 +34,7 @@ from busZonesTimes import busZonesTimesFiveSaturday
 from busZonesTimes import busZonesTimesSixSaturday
 from busZonesTimes import busHorarios242sabado
 from busZonesTimes import horario125sabado
+from busZonesTimes import horario125Rsabado
 # from busZonesTimes import S2sabados
 # Importa horario de Domingo de las lineas. ----------- (LINEA 272)
 from busZonesTimes import busZonesTimesOneSunday
@@ -42,6 +45,7 @@ from busZonesTimes import busZonesTimesFourSunday
 from busZonesTimes import busZonesTimesFiveSunday
 from busZonesTimes import busZonesTimesSixSunday
 from busZonesTimes import horario125domingo
+from busZonesTimes import horario125Rdomingo
 # from busZonesTimes import S2domingos
 # Importa las rutas para graficarlas. -----------
 from busRoutes import lineOne
@@ -53,6 +57,7 @@ from busRoutes import lineFive
 from busRoutes import lineSix
 from busRoutes import line242
 from busRoutes import linea125
+from busRoutes import linea125R
 from busRoutes import lineaS2
 # Importa el numero, color y estado de las lineas. -----------
 from busStops import busStopsDict
@@ -222,6 +227,10 @@ def getLine242():
 def getLine125():
     return jsonify(linea125)
 
+@app.route("/api/125R")
+def getLine125R():
+    return jsonify(linea125R)
+
 @app.route("/api/S2")
 def getLineS2():
     return jsonify(lineaS2)
@@ -270,6 +279,10 @@ def getBusZones242():
 def getBusZones125():
     return jsonify(horario125)
 
+@app.route("/api/busZonesTimes/125R")
+def getBusZones125R():
+    return jsonify(horario125R)
+
 # ============================== Horarios por ZONA (Domingo) ==============================
 
 @app.route("/api/busZonesTimes/1/sunday")
@@ -303,6 +316,10 @@ def getBusZonesSixSunday():
 @app.route("/api/busZonesTimes/125/sunday")
 def getBusZones125Sunday():
     return jsonify(horario125domingo)
+
+@app.route("/api/busZonesTimes/125R/sunday")
+def getBusZones125RSunday():
+    return jsonify(horario125Rdomingo)
 
 # ============================== Horarios por ZONA (Sabado) ==============================
 
@@ -341,6 +358,10 @@ def getBusZones242Saturday():
 @app.route("/api/busZonesTimes/125/saturday")
 def getBusZones125Saturday():
     return jsonify(horario125sabado)
+
+@app.route("/api/busZonesTimes/125R/saturday")
+def getBusZones125RSaturday():
+    return jsonify(horario125Rsabado)
 
 
 # ============================== Botones ==============================
@@ -384,6 +405,10 @@ def get6chedule():
 def get125schedule():
     return jsonify(horariosierras)
 
+@app.route("/api/125R/schedule")
+def get125Rschedule():
+    return jsonify(horarioSarmientoDif)
+
 @app.route("/api/242/schedule")
 def get242chedule():
     return jsonify(horario242)
@@ -416,6 +441,32 @@ def getS2schedule():
 #     return jsonify(schedule5)
 
 # @app.route("/api/6/schedule/saturday")
+# def get6chedule():
+#     return jsonify(schedule6)
+
+# ============================== Horarios de las lineas [Lista] (Domingo) ==============================
+
+# @app.route("/api/1B/schedule/sunday")
+# def get1Bchedule():
+#     return jsonify(schedule1B)
+
+# @app.route("/api/2/schedule/sunday")
+# def get2chedule():
+#     return jsonify(schedule2)
+
+# @app.route("/api/3/schedule/sunday")
+# def get3chedule():
+#     return jsonify(schedule3)
+
+# @app.route("/api/4/schedule/sunday")
+# def get4chedule():
+#     return jsonify(schedule4)
+
+# @app.route("/api/5/schedule/sunday")
+# def get5chedule():
+#     return jsonify(schedule5)
+
+# @app.route("/api/6/schedule/sunday")
 # def get6chedule():
 #     return jsonify(schedule6)
 
