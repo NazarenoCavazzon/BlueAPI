@@ -10,6 +10,6 @@ linesDict = [
         # Colores en hexadecimal
         "hexcolor": [],
         # Subtitulo de linea
-        "linesubtitle": []
+        "linesubtitle": ["Crucero - B° La  Perla","B° Villa Oviedo - Crucero","V. Camiares - B° Virrey","B° Liniers - B° Virrey","La Gruta - Crucero","","Alta Gracia - Cordoba","Carlos Paz - AG"]
     }
 ]
