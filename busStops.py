@@ -6,6 +6,10 @@ linesDict = [
         #green, orange, yellow, red, blue, cyan, gray
         "colors": ["orange", "green", "green", "green", "yellow", "green", "blue", "green"],
         #suspended, operative
-        "status": ["operative","operative","operative","operative","operative","operative", "operative", "operative"]
+        "status": ["operative","operative","operative","operative","operative","operative", "operative", "operative"],
+        # Colores en hexadecimal
+        "hexcolor": [],
+        # Subtitulo de linea
+        "linesubtitle": []
     }
 ]
