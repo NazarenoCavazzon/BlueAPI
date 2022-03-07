@@ -10,6 +10,12 @@ linesDict = [
         # Colores en hexadecimal
         "hexcolor": [],
         # Subtitulo de linea
-        "linesubtitle": ["Crucero - B° La  Perla","B° Villa Oviedo - Crucero","V. Camiares - B° Virrey","B° Liniers - B° Virrey","La Gruta - Crucero","","Alta Gracia - Cordoba","Carlos Paz - AG"]
+        "linesubtitle": ["Crucero - B° La  Perla","B° Villa Oviedo - Crucero","V. Camiares - B° Virrey","B° Liniers - B° Virrey","La Gruta - Crucero","","Alta Gracia - Cordoba","Carlos Paz - AG"],
+        # Precio de Boleto
+        "precioBoleto": [60.00,60.00,60.00,60.00,60.00,60.00,180.00,180.00],
+        # Nombre de Empresa en pestaña info
+        "empresa": ["Martinez S.R.L.", "Garay S.R.L.", "Garay S.R.L.", "Garay S.R.L.", "Good Travel Tours", "Garay S.R.L.", "Sierras de Calamuchita", "Sarmiento S.R.L."],
+        # Link URL boton [Comprar Boleto] (numero 0 deshabilita el boton)
+        "linkCompraBoleto":[0, 0, 0, 0, 0, 0, "http://gruposierras.com.ar", "http://gruposarmiento.com.ar"]
     }
 ]
