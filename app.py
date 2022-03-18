@@ -8,6 +8,7 @@ from busSchedules import schedule3
 from busSchedules import schedule4
 from busSchedules import schedule5
 from busSchedules import schedule6
+from busSchedules import horario7
 from busSchedules import horario242
 from busSchedules import horarioS2
 from busSchedules import horariosierras
@@ -20,6 +21,7 @@ from busZonesTimes import busZonesTimesThree
 from busZonesTimes import busZonesTimesFour
 from busZonesTimes import busZonesTimesFive
 from busZonesTimes import busZonesTimesSix
+from busZonesTimes import linea7Habiles
 from busZonesTimes import busHorarios242
 from busZonesTimes import horario125
 from busZonesTimes import horario125R
@@ -32,6 +34,7 @@ from busZonesTimes import busZonesTimesThreeSaturday
 from busZonesTimes import busZonesTimesFourSaturday
 from busZonesTimes import busZonesTimesFiveSaturday
 from busZonesTimes import busZonesTimesSixSaturday
+from busZonesTimes import linea7Sabado
 from busZonesTimes import busHorarios242sabado
 from busZonesTimes import horario125sabado
 from busZonesTimes import horario125Rsabado
@@ -44,6 +47,7 @@ from busZonesTimes import busZonesTimesThreeSunday
 from busZonesTimes import busZonesTimesFourSunday
 from busZonesTimes import busZonesTimesFiveSunday
 from busZonesTimes import busZonesTimesSixSunday
+from busZonesTimes import linea7Domingo
 from busZonesTimes import horario125domingo
 from busZonesTimes import horario125Rdomingo
 # from busZonesTimes import S2domingos
@@ -55,6 +59,7 @@ from busRoutes import lineThree
 from busRoutes import lineFour
 from busRoutes import lineFive
 from busRoutes import lineSix
+from busRoutes import linea7
 from busRoutes import line242
 from busRoutes import linea125
 from busRoutes import linea125R
@@ -219,6 +224,10 @@ def getLine5():
 def getLine6():
     return jsonify(lineSix)
 
+@app.route("/api/7")
+def getLine7():
+    return jsonify(linea7)
+
 @app.route("/api/242")
 def getLine242():
     return jsonify(line242)
@@ -271,6 +280,10 @@ def getBusZonesFive():
 def getBusZonesSix():
     return jsonify(busZonesTimesSix)
 
+@app.route("/api/busZonesTimes/7")
+def getBusZones7():
+    return jsonify(linea7Habiles)
+
 @app.route("/api/busZonesTimes/242")
 def getBusZones242():
     return jsonify(busHorarios242)
@@ -313,6 +326,10 @@ def getBusZonesFiveSunday():
 def getBusZonesSixSunday():
     return jsonify(busZonesTimesSixSunday)
 
+@app.route("/api/busZonesTimes/7/sunday")
+def getBusZones7Domingos():
+    return jsonify(linea7Domingo)
+
 @app.route("/api/busZonesTimes/125/sunday")
 def getBusZones125Sunday():
     return jsonify(horario125domingo)
@@ -350,6 +367,10 @@ def getBusZonesFiveSaturday():
 @app.route("/api/busZonesTimes/6/saturday")
 def getBusZonesSixSaturday():
     return jsonify(busZonesTimesSixSaturday)
+
+@app.route("/api/busZonesTimes/7/saturday")
+def getBusZones7Sabado():
+    return jsonify(linea7Sabado)
 
 @app.route("/api/busZonesTimes/242/saturday")
 def getBusZones242Saturday():
@@ -400,6 +421,10 @@ def get5chedule():
 @app.route("/api/6/schedule")
 def get6chedule():
     return jsonify(schedule6)
+
+@app.route("/api/7/schedule")
+def get7chedule():
+    return jsonify(horario7)
 
 @app.route("/api/125/schedule")
 def get125schedule():
