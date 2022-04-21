@@ -2,6 +2,7 @@ import imp
 import os
 import codecs
 # Importa horarios para seccion INFO. -----------
+from manejo import preguntas_manejo
 from busSchedules import schedule1B
 from busSchedules import schedule2
 from busSchedules import schedule3
@@ -495,6 +496,12 @@ def getS2schedule():
 # def get6chedule():
 #     return jsonify(schedule6)
 
+
+# ================ Preguntas de Manejo ===============
+
+@app.route("/api/preguntas")
+def getQuestions():
+    return jsonify(preguntas_manejo)
 
 if __name__ == '__main__':
     app.run(debug=False, port=os.getenv('PORT', 5000))
