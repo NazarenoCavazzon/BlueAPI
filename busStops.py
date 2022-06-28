@@ -10,7 +10,7 @@ linesDict = [
         # Colores en hexadecimal
         "hexcolor": [],
         # Subtitulo de linea
-        "lineSubtitle": ["Crucero - B° La  Perla","B° Villa Oviedo - Crucero","V. Camiares - B° Virrey","B° Liniers - B° Virrey","La Gruta - Crucero","","Buena Esperanza - Crucero","Alta Gracia - Cordoba","Carlos Paz - AG"],
+        "lineSubtitle": ["Crucero - B° La  Perla","B° Villa Oviedo - Crucero","V. Camiares - B° Virrey","B° Liniers - B° Virrey","La Gruta - Crucero","","Buena Esperanza - Crucero","Alta Gracia - Cordoba","Alta Gracia - Carlos Paz"],
         # Precio de Boleto
         "precioBoleto": [60.00,60.00,60.00,60.00,60.00,60.00,60.00,180.00,180.00],
         # Nombre de Empresa en pestaña info
