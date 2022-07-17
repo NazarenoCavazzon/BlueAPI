@@ -1,4 +1,3 @@
-import imp
 import os
 import codecs
 # Importa horarios para seccion INFO. -----------
@@ -70,7 +69,6 @@ from busStops import busStopsDict
 from busStops import linesDict
 # No se que hace. -----------
 from datetime import datetime
-from flask_caching import Cache
 from flask import Flask, send_from_directory, jsonify
 from bs4 import BeautifulSoup
 
@@ -121,7 +119,6 @@ def formatResponse(value):
 
 app = Flask(__name__)
 app.config['JSON_SORT_KEYS'] = False
-cache = Cache(app, config={'CACHE_TYPE': 'simple'})
 
 @app.route("/favicon.ico")
 def favicon():
@@ -148,42 +145,36 @@ def ping():
     return "pong"
 
 @app.route("/api/dolar/oficial")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getDolarOficial():
     dolarValues = getValues(DOLAR_URL)
     dolarOficial = formatResponse(dolarValues[0])
     return jsonify(dolarOficial)
 
 @app.route("/api/dolar/blue")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getDolarBlue():
     dolarValues = getValues(DOLAR_URL)
     dolarBlue = formatResponse(dolarValues[1])
     return jsonify(dolarBlue)
 
 @app.route("/api/euro/oficial")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getEuroOficial():
     euroValues = getValues(EURO_URL)
     euroOficial = formatResponse(euroValues[0])
     return jsonify(euroOficial)
 
 @app.route("/api/euro/blue")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getEuroBlue():
     euroValues = getValues(EURO_URL)
     euroBlue = formatResponse(euroValues[1])
     return jsonify(euroBlue)
 
 @app.route("/api/real/oficial")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getRealOficial():
     realValues = getValues(REAL_URL)
     realOficial = formatResponse(realValues[0])
     return jsonify(realOficial)
 
 @app.route("/api/real/blue")
-@cache.cached(timeout=CACHE_TIMEOUT_SECONDS)
 def getRealBlue():
     realValues = getValues(REAL_URL)
     realBlue = formatResponse(realValues[1])
